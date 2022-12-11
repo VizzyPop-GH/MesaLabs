@@ -30,4 +30,4 @@ func _on_gh_request_completed(result, response_code, headers, body):
 		
 	else:
 		print("WARN: Unable to get build number")
-		ver.text = Main.version # shove it on da text
+		ver.text = "Mesa Labs "+ Main.version +"@" + Main.branch+  " (b" + "0" + ")" # shove it on da text
