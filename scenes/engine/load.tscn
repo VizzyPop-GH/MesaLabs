@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://du0fruio68m52"]
+
+[ext_resource type="PackedScene" uid="uid://bwmskxe87jrmq" path="res://scenes/engine/debug.tscn" id="1_klmj2"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="MainCam" type="Camera2D" parent="."]
+current = true
+
+[node name="Main" type="CanvasLayer" parent="MainCam"]
+
+[node name="debug" parent="MainCam" instance=ExtResource("1_klmj2")]

@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwmskxe87jrmq"]
+
+[ext_resource type="Script" path="res://src/engine/debug.gd" id="1_bqh7r"]
+
+[node name="debug" type="CanvasLayer"]
+script = ExtResource("1_bqh7r")
+
+[node name="ver" type="Label" parent="."]
+offset_top = -4.0
+offset_right = 1149.0
+offset_bottom = 22.0
+text = "Loading.."
+
+[node name="fps" type="Label" parent="."]
+offset_top = 28.0
+offset_right = 64.0
+offset_bottom = 54.0
+text = "5fps"
+
+[node name="info" type="Label" parent="."]
+offset_top = 12.0
+offset_right = 228.0
+offset_bottom = 38.0
+text = "InfoText"
+
+[node name="GH" type="HTTPRequest" parent="."]
+
+[connection signal="request_completed" from="GH" to="." method="_on_gh_request_completed"]
